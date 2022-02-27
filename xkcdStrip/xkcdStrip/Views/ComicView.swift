@@ -80,9 +80,8 @@ class ComicView: UIView {
             contentView.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor),
             contentView.bottomAnchor.constraint(equalTo: scrollView.contentLayoutGuide.bottomAnchor),
             contentView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            contentView.centerYAnchor.constraint(equalTo: centerYAnchor),
             
-            comicTitleLabel.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 20),
+            comicTitleLabel.topAnchor.constraint(equalTo: contentView.topAnchor,constant: 0),
             comicTitleLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             comicTitleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             comicTitleLabel.heightAnchor.constraint(equalToConstant: 24),
@@ -96,7 +95,6 @@ class ComicView: UIView {
             activityIndicator.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             activityIndicator.heightAnchor.constraint(equalToConstant: 90),
             activityIndicator.widthAnchor.constraint(equalTo:activityIndicator.heightAnchor)
-            
         ])
     }
     

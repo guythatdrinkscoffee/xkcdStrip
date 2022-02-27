@@ -10,6 +10,7 @@ import Combine
 
 class ComicViewController: UIViewController {
     private var subscriptions = [AnyCancellable]()
+    private var api = API()
     
     override func loadView() {
         view = ComicView()
@@ -20,7 +21,7 @@ class ComicViewController: UIViewController {
         
         configureViewController()
         
-        API.comic()
+        api.comic()
             .receive(on: DispatchQueue.main, options: .none)
             .sink { completion in
                 print(completion)
@@ -31,6 +32,6 @@ class ComicViewController: UIViewController {
     }
     
     private func configureViewController(){
-        self.tabBarItem = UITabBarItem(title: "Current", image: UIImage(systemName: "newspaper"), tag: 0)
+      
     }
 }

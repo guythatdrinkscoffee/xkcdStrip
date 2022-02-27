@@ -18,6 +18,10 @@
 		BE442DEA27CAF07E00ACB4D8 /* Comic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE442DE927CAF07E00ACB4D8 /* Comic.swift */; };
 		BE442DEC27CAFEB400ACB4D8 /* ComicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE442DEB27CAFEB400ACB4D8 /* ComicView.swift */; };
 		BE442DEE27CB186D00ACB4D8 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE442DED27CB186D00ACB4D8 /* ImageLoader.swift */; };
+		BE442DF027CB4D5A00ACB4D8 /* ComicArchiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE442DEF27CB4D5A00ACB4D8 /* ComicArchiveViewController.swift */; };
+		BE58C2FA27CBF39D0066ED76 /* ComicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58C2F927CBF39D0066ED76 /* ComicTableViewCell.swift */; };
+		BE58C2FD27CBF4780066ED76 /* ComicsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58C2FC27CBF4780066ED76 /* ComicsDataSource.swift */; };
+		BE58C2FF27CC0F450066ED76 /* ComicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE58C2FE27CC0F450066ED76 /* ComicDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,10 @@
 		BE442DE927CAF07E00ACB4D8 /* Comic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic.swift; sourceTree = "<group>"; };
 		BE442DEB27CAFEB400ACB4D8 /* ComicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicView.swift; sourceTree = "<group>"; };
 		BE442DED27CB186D00ACB4D8 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		BE442DEF27CB4D5A00ACB4D8 /* ComicArchiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicArchiveViewController.swift; sourceTree = "<group>"; };
+		BE58C2F927CBF39D0066ED76 /* ComicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicTableViewCell.swift; sourceTree = "<group>"; };
+		BE58C2FC27CBF4780066ED76 /* ComicsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsDataSource.swift; sourceTree = "<group>"; };
+		BE58C2FE27CC0F450066ED76 /* ComicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,20 +74,80 @@
 		BE442DD027CAEDF100ACB4D8 /* xkcdStrip */ = {
 			isa = PBXGroup;
 			children = (
+				BE442DF527CB4F6100ACB4D8 /* Models */,
+				BE442DF427CB4F5A00ACB4D8 /* Views */,
+				BE442DF327CB4F4F00ACB4D8 /* Utils */,
+				BE442DF127CB4F2400ACB4D8 /* Screens */,
+				BE442DF227CB4F3200ACB4D8 /* Support */,
+			);
+			path = xkcdStrip;
+			sourceTree = "<group>";
+		};
+		BE442DF127CB4F2400ACB4D8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				BE442DD527CAEDF100ACB4D8 /* MainTabViewController.swift */,
+				BE442DE527CAEF2F00ACB4D8 /* ComicViewController.swift */,
+				BE442DEF27CB4D5A00ACB4D8 /* ComicArchiveViewController.swift */,
+				BE58C2FE27CC0F450066ED76 /* ComicDetailViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		BE442DF227CB4F3200ACB4D8 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				BE442DDF27CAEDF200ACB4D8 /* Info.plist */,
 				BE442DD127CAEDF100ACB4D8 /* AppDelegate.swift */,
 				BE442DD327CAEDF100ACB4D8 /* SceneDelegate.swift */,
-				BE442DD527CAEDF100ACB4D8 /* MainTabViewController.swift */,
 				BE442DD727CAEDF100ACB4D8 /* Main.storyboard */,
 				BE442DDA27CAEDF200ACB4D8 /* Assets.xcassets */,
 				BE442DDC27CAEDF200ACB4D8 /* LaunchScreen.storyboard */,
-				BE442DDF27CAEDF200ACB4D8 /* Info.plist */,
-				BE442DE527CAEF2F00ACB4D8 /* ComicViewController.swift */,
+			);
+			name = Support;
+			sourceTree = "<group>";
+		};
+		BE442DF327CB4F4F00ACB4D8 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
 				BE442DED27CB186D00ACB4D8 /* ImageLoader.swift */,
-				BE442DE727CAF07200ACB4D8 /* APIService.swift */,
-				BE442DE927CAF07E00ACB4D8 /* Comic.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BE442DF427CB4F5A00ACB4D8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BE58C2F827CBF1900066ED76 /* Cells */,
 				BE442DEB27CAFEB400ACB4D8 /* ComicView.swift */,
 			);
-			path = xkcdStrip;
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BE442DF527CB4F6100ACB4D8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BE58C2FB27CBF4680066ED76 /* DataSources */,
+				BE442DE727CAF07200ACB4D8 /* APIService.swift */,
+				BE442DE927CAF07E00ACB4D8 /* Comic.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BE58C2F827CBF1900066ED76 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BE58C2F927CBF39D0066ED76 /* ComicTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BE58C2FB27CBF4680066ED76 /* DataSources */ = {
+			isa = PBXGroup;
+			children = (
+				BE58C2FC27CBF4780066ED76 /* ComicsDataSource.swift */,
+			);
+			path = DataSources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,8 +224,12 @@
 				BE442DE627CAEF2F00ACB4D8 /* ComicViewController.swift in Sources */,
 				BE442DE827CAF07200ACB4D8 /* APIService.swift in Sources */,
 				BE442DEA27CAF07E00ACB4D8 /* Comic.swift in Sources */,
+				BE58C2FA27CBF39D0066ED76 /* ComicTableViewCell.swift in Sources */,
 				BE442DD627CAEDF100ACB4D8 /* MainTabViewController.swift in Sources */,
+				BE58C2FD27CBF4780066ED76 /* ComicsDataSource.swift in Sources */,
 				BE442DD227CAEDF100ACB4D8 /* AppDelegate.swift in Sources */,
+				BE58C2FF27CC0F450066ED76 /* ComicDetailViewController.swift in Sources */,
+				BE442DF027CB4D5A00ACB4D8 /* ComicArchiveViewController.swift in Sources */,
 				BE442DD427CAEDF100ACB4D8 /* SceneDelegate.swift in Sources */,
 				BE442DEE27CB186D00ACB4D8 /* ImageLoader.swift in Sources */,
 				BE442DEC27CAFEB400ACB4D8 /* ComicView.swift in Sources */,

@@ -8,7 +8,8 @@
 import Foundation
 import UIKit
 
-struct Comic: Codable {
+struct Comic: Codable, Comparable {
+ 
     let stripNumber: Int
     let transcript: String
     let alternateTranscript: String
@@ -22,7 +23,10 @@ struct Comic: Codable {
         case stripImageURLString = "img"
     }
     
-    var image: UIImage? = nil
+    static func < (lhs: Comic, rhs: Comic) -> Bool {
+        return lhs.stripNumber < rhs.stripNumber
+    }
+    
 }
 
 extension Comic {
