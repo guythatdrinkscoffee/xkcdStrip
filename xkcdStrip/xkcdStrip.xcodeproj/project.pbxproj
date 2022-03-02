@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE39E78027CF082000E1E152 /* Shareable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE39E77F27CF082000E1E152 /* Shareable.swift */; };
 		BE442DD227CAEDF100ACB4D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE442DD127CAEDF100ACB4D8 /* AppDelegate.swift */; };
 		BE442DD427CAEDF100ACB4D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE442DD327CAEDF100ACB4D8 /* SceneDelegate.swift */; };
 		BE442DD627CAEDF100ACB4D8 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE442DD527CAEDF100ACB4D8 /* MainTabViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE39E77F27CF082000E1E152 /* Shareable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shareable.swift; sourceTree = "<group>"; };
 		BE442DCE27CAEDF100ACB4D8 /* xkcdStrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = xkcdStrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE442DD127CAEDF100ACB4D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BE442DD327CAEDF100ACB4D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +57,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE39E77E27CF07F600E1E152 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				BE39E77F27CF082000E1E152 /* Shareable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		BE442DC527CAEDF100ACB4D8 = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +137,7 @@
 		BE442DF527CB4F6100ACB4D8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				BE39E77E27CF07F600E1E152 /* Protocols */,
 				BE58C2FB27CBF4680066ED76 /* DataSources */,
 				BE442DE727CAF07200ACB4D8 /* APIService.swift */,
 				BE442DE927CAF07E00ACB4D8 /* Comic.swift */,
@@ -227,6 +238,7 @@
 				BE58C2FA27CBF39D0066ED76 /* ComicTableViewCell.swift in Sources */,
 				BE442DD627CAEDF100ACB4D8 /* MainTabViewController.swift in Sources */,
 				BE58C2FD27CBF4780066ED76 /* ComicsDataSource.swift in Sources */,
+				BE39E78027CF082000E1E152 /* Shareable.swift in Sources */,
 				BE442DD227CAEDF100ACB4D8 /* AppDelegate.swift in Sources */,
 				BE58C2FF27CC0F450066ED76 /* ComicDetailViewController.swift in Sources */,
 				BE442DF027CB4D5A00ACB4D8 /* ComicArchiveViewController.swift in Sources */,

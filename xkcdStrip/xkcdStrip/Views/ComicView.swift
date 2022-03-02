@@ -12,6 +12,12 @@ class ComicView: UIView {
     
     private var comicSubscriber: AnyCancellable?
     
+    public var comicImage: UIImage? = nil {
+        didSet {
+            
+        }
+    }
+    
     private lazy var scrollView : UIScrollView = {
         let scrollview = UIScrollView()
         scrollview.translatesAutoresizingMaskIntoConstraints = false
@@ -87,8 +93,8 @@ class ComicView: UIView {
             comicTitleLabel.heightAnchor.constraint(equalToConstant: 24),
             
             comicImageView.topAnchor.constraint(equalTo: comicTitleLabel.topAnchor, constant: 50),
-            comicImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            comicImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
+            comicImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor,constant: 5),
+            comicImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor,constant: -5),
             comicImageView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor),
             
             activityIndicator.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
@@ -113,6 +119,7 @@ class ComicView: UIView {
     }
     
     private func updateUI(comic: Comic, image: UIImage?){
+        self.comicImage = image
         comicTitleLabel.text = comic.title
         comicImageView.image = image
     }
