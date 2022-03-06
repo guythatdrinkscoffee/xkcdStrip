@@ -55,8 +55,8 @@ struct API {
         }
     }
     
-    func allComics() -> AnyPublisher<[Comic], Error> {
-        return mergeComics(comicNumbers: Array(1...100))
+    func allComics(comicNumber: [Int]) -> AnyPublisher<[Comic], Error> {
+        return mergeComics(comicNumbers: comicNumber)
             .scan([]) { comics, comic in
                 return comics + [comic]
             }

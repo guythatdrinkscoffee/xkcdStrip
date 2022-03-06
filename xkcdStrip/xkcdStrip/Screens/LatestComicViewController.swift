@@ -8,11 +8,11 @@
 import UIKit
 import Combine
 
-class ComicViewController: UIViewController {
+class LatestComicViewController: UIViewController {
     
     //MARK: - PROPERTIES
-    
     private var subscriptions = [AnyCancellable]()
+    private var defaults = UserDefaults.standard
     private var api = API()
     
     //MARK: - LIFE CYCLE
@@ -24,6 +24,7 @@ class ComicViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureViewController()
         configureNavigationItems()
         
         api.comic()
@@ -36,7 +37,11 @@ class ComicViewController: UIViewController {
             .store(in: &subscriptions)
     }
     
-    //MARK: - MEMBER FUNCTIONS
+    //MARK: - CONFIGURATION
+    
+    private func configureViewController(){
+        view.backgroundColor = .systemBackground
+    }
     
     private func configureNavigationItems() {
         let shareBarButton = UIBarButtonItem(image: UIImage(systemName: "square.and.arrow.up"), style: .plain, target: self, action: #selector(shareButtonTapped(_:)))
@@ -52,7 +57,7 @@ class ComicViewController: UIViewController {
 
 //MARK: - EXTENSIONS
 
-extension ComicViewController: Shareable {
+extension LatestComicViewController: Shareable {
     func share(image: UIImage?) {
         let shareItems: [UIImage?] = [image]
         let actionController = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
